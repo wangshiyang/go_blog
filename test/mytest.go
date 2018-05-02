@@ -2,16 +2,16 @@ package test
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
 	"strconv"
+	"time"
 )
 
-func main(){
+func main() {
 	start := time.Now()
-	dictionary := make(map[int] string, 8000000)
-	for i:=0; i<8000000;i++ {
-		dictionary[i] = "hello" + strconv.Itoa(i);
+	dictionary := make(map[int]string, 8000000)
+	for i := 0; i < 8000000; i++ {
+		dictionary[i] = "hello" + strconv.Itoa(i)
 	}
 	duration := time.Since(start)
 	fmt.Println("time used:", duration)
@@ -20,8 +20,8 @@ func main(){
 
 	start = time.Now()
 
-	dictionary1 := make(map[int] string, 1000)
-	for i:=0; i<1000;i++ {
+	dictionary1 := make(map[int]string, 1000)
+	for i := 0; i < 1000; i++ {
 		dictionary1[i] = GetRandomString(20)
 	}
 
@@ -32,7 +32,7 @@ func main(){
 }
 
 //生成随机字符串
-func GetRandomString(lengths int) string{
+func GetRandomString(lengths int) string {
 	str := "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	bytes := []byte(str)
 	var result [20]byte

@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"my_go_project/go_blog/pkg/setting"
 	"my_go_project/go_blog/routers"
+	"net/http"
 )
 
 func main() {

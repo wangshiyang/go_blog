@@ -1,9 +1,9 @@
 package test
 
 import (
-	"os"
 	"bufio"
 	"io"
+	"os"
 )
 
 func check(e error) {
@@ -12,8 +12,8 @@ func check(e error) {
 	}
 }
 
-func main(){
-	fi,err := os.Open("E:\\123.txt")
+func main() {
+	fi, err := os.Open("E:\\123.txt")
 
 	check(err)
 
